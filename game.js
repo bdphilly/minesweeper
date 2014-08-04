@@ -7,6 +7,7 @@
     this.board = new Minesweeper.Board(width, totalBombs);
     this.flags = totalBombs;
     this.timer = 0;
+    this.lost = false;
 
     this.updateFlags();
     this.updateTimer();
@@ -94,9 +95,10 @@
 
       var id = $(event.currentTarget).data("id");
       tiles[id].reveal();
-      if (tiles[id].flagged) {
-
+      if (tiles[id].flagged || that.lost === true) {
+        // we don't want anything to happen here
       } else if (tiles[id].hasBomb) {
+        that.lost = true;
         that.renderLost(id);
         killIntervals();
       } else {
