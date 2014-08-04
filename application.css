@@ -1,0 +1,209 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #599EFF;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Droid Sans Mono';
+}
+
+#game {
+  margin: 0px auto;
+  border: #BCBCBC solid;
+  border-width: 6px;
+  box-sizing: border-box;
+}
+
+#navbar {
+  border-style: inset;
+  height: 33px;
+  background: #BCBCBC;
+  border-width: 5px;
+  box-sizing: border-box;
+}
+
+.nav-container {
+  width: 33.3333%;
+  float: left;
+}
+
+.skill-levels {
+  text-align: center;
+}
+
+#easy {
+  display: none;
+}
+
+#smiley {
+  width: 23px;
+  height: 23px;
+  margin: 0 auto;
+  background-image: url('minesweeper.gif');
+}
+
+#flags {
+  width: 39px;
+  height: 23px;
+}
+
+.flag {
+  background-image: url('minesweeper.gif');
+  width: 13px;
+  height: 23px;
+  float: left;
+}
+
+#timer {
+  width: 39px;
+  height: 23px;
+  float: right;
+}
+
+.time-component {
+  background-image: url('minesweeper.gif');
+  width: 13px;
+  height: 23px;
+  float: left;
+}
+
+.zero {
+  background-position: 0px 0px;
+}
+
+.one {
+  background-position: -13px 0px;
+}
+
+.two {
+ background-position: -26px 0px; 
+}
+
+.three {
+  background-position: -39px 0px;
+}
+
+.four {
+ background-position: -52px 0px; 
+}
+
+.five {
+  background-position: -65px 0px;
+}
+
+.six {
+ background-position: -78px 0px; 
+}
+
+.seven {
+  background-position: -91px 0px;
+}
+
+.eight {
+ background-position: -104px 0px; 
+}
+
+.nine {
+ background-position: -117px 0px; 
+}
+
+#score {
+  background-image: url('minesweeper.gif');
+}
+
+#board {
+  margin: 0px auto;
+  position: relative;
+  border-style: inset;
+}
+
+.tile {
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  float: left;
+  background-image: url('minesweeper.gif');
+}
+
+/*Grabbing Icon Positions*/
+
+.flagged{
+  background-position: -16px -39px;
+}
+
+.bomb{
+  background-position: -64px -39px;
+}
+
+.incorrectFlag{
+  background-position: -48px -39px;
+}
+
+.activatedBomb{
+  background-position: -32px -39px;
+}
+
+.concealed{
+  background-position: 0px -39px;
+}
+
+.revealed-0{
+  background-position: 0px -23px;
+}
+
+.revealed-1{
+  background-position: -16px -23px;
+}
+
+.revealed-2{
+  background-position: -32px -23px;
+}
+
+.revealed-3{
+  background-position: -48px -23px;
+}
+
+.revealed-4{
+  background-position: -64px -23px;
+}
+
+.revealed-5{
+  background-position: -80px -23px;
+}
+
+.revealed-6{
+  background-position: -96px -23px;
+}
+
+.revealed-7{
+  background-position: -112px -23px;
+}
+
+.revealed-8{
+  background-position: -128px -23px;
+}
+
+.normalFace{
+  background-position: -1px -56px;
+}
+
+.winFace{
+  background-position: -105px -56px;
+}
+
+.loseFace{
+  background-position: -79px -56px;
+}
+
+.otherFace{
+  background-position: -27px -56px;
+}
+
+.mouseClickFace{
+  background-position: -53px -56px;
+}

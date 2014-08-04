@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Minesweeper</title>
+      <link rel="stylesheet" type="text/css" href="./application.css" media="screen" />
+      <script src="./jquery.js"></script>
+      <script src="./board.js"></script>
+      <script src="./tile.js"></script>
+      <script src="./game.js"></script>
+      <script src="./underscore.js"></script>
+      <script type="text/javascript"></script>
+  </head>
+  <body>
+    <h1>Minesweeper</h1>
+    <div id="game">
+      <div id="navbar">
+        <div class="nav-container">
+          <div id="flags"></div>
+        </div>
+        <div class="nav-container">
+          <div id="smiley"></div>
+        </div>
+        <div class="nav-container">
+          <div id="timer"></div>
+        </div>
+      </div>
+      <div id="board"></div>
+    </div>
+    <br>
+    <div class="skill-levels">
+      <button id="easy">Too Easy?</button>
+      <button id="hard">Too Hard?</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  var currentDifficulty = 0;
+  var intervalArray = [];
+
+  $('#smiley').mouseup(function () {
+    $('#smiley').removeClass();
+    $('#smiley').addClass('normalFace');
+      startNewGame(currentDifficulty);
+  });
+
+  $('#easy').click(function (event) {
+    event.preventDefault()
+    currentDifficulty = 0;
+    startNewGame(currentDifficulty);
+    $('#easy').hide();
+    $('#hard').show();
+  });
+
+  $('#hard').click(function (event) {
+    event.preventDefault()
+    currentDifficulty = 1;
+    startNewGame(currentDifficulty);
+    $('#hard').hide();
+    $('#easy').show();
+  });
+
+  var killIntervals = function () {
+    while(intervalArray.length > 0) {
+      clearInterval(intervalArray.pop());
+    }
+  };
+
+  var startNewGame = function (level) {
+    if (level === 0) {
+      game = new Minesweeper.Game(9, 10);
+    } else {
+      game = new Minesweeper.Game(30, 99);
+    }
+
+    game.render();
+  };
+
+  startNewGame(0);
+</script>
+
+
+
+
+
+
+
+
